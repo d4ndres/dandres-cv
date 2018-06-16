@@ -1,34 +1,139 @@
-/*____________________________________global_____________________________________*/
+/*____________________________________out______________________________________*/
+
+
+/*____________________________________global___________________________________*/
+
 body{
   margin: 0;
   min-height: 100vh;
   background: lightgray;
-  font-family: 'Handlee', arial;
+  font-family: 'Sanchez', arial;
 
   display: flex;
   flex-direction: column;
   position: relative;
 }
-
+h1,h2,h3,h4{
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
+  padding: .5em 0 1em 0;
+}
+h2{
+  font-size: 1.7em;
+}
+h3{
+  font-size: 1.2em;
+}
+h4{
+  font-size: 1em;
+  text-align: left;
+}
+ul{
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style-type: circle;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+a:hover{
+  text-decoration: underline;
+}
 /*____________________________________show ____________________________________*/
 /*____________________________________left_____________________________________*/
 .left-shoulder{
-  background: #0c457d;
+  background: #397ec3;
   min-height: 100vh;
   width: 70vw;
 }
+
+/*---------------header---------------->*/
+header{
+  background-image: url(../image/desk.jpg);
+  background-size: cover;
+  background-position: bottom;
+  padding: 10px;
+}
+
+
+.about-me {
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.visual-dark{
+  width: 50%;
+  height: 100%;
+}
+
+.formation, .goals{
+  margin: 0 auto;
+  width: inherit;
+
+}
+.formation{
+  text-align: center;
+}
+.goals{
+  position: relative;
+  bottom: 15px;
+}
+
+/*<--------------*header--------------/
+
+/* ---------cv-------------------> */
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* .main-content * {
+  border: solid red 1px;
+} */
+
+/* <---------cv------------------- */
+
+
 /*____________________________________right____________________________________*/
 
 .right-shoulder{
-  background:	#ffbe4f;
+  background: #fff;
   min-height: 100vh;
   width: 30vw;
   position: fixed;
   right: 0;
   color: black;
+
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-/*____________________________________keyframes____________________________________*/
+
+.main-information{
+
+}
+
+/* <---------about me------------- */
+.my-name{
+  font-size: 1.8em;
+}
+.motivacion{
+  font-size: .8em;
+}
+.important{
+  color: #0e699e;
+  font-size: 1.2em;
+}
+.important::after, .important::before{
+  content: '"'
+}
+/*____________________________________keyframes________________________________*/
 /*____________________________________media____________________________________*/
