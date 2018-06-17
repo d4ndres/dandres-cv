@@ -1,6 +1,5 @@
 /*____________________________________out______________________________________*/
 
-
 /*____________________________________global___________________________________*/
 
 body{
@@ -44,10 +43,10 @@ a{
 a:hover{
   text-decoration: underline;
 }
-/*____________________________________show ____________________________________*/
+
 /*____________________________________left_____________________________________*/
 .left-shoulder{
-  background:	#0073e5;
+  background:	#0a6e8b;
   min-height: 100vh;
   width: 75vw;
 }
@@ -96,6 +95,15 @@ header{
   flex-direction: column;
   align-items: center;
 }
+/*00000000000000000000000 mini-global  */
+.articules{
+  width: 90%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background: rgba(0,0,0,.2);
+  margin-bottom: 2em;
+}
+
 
 /*11111111111111111111111 Heph*/
 .heph{
@@ -125,11 +133,12 @@ header{
   overflow: auto;
   width: 600px;
   max-height: 300px;
+  cursor: ns-resize;
 }
-.phone-heph{
+.phone-image{
   width: 376px;
 }
-.pc-heph img{
+.pc-image img{
   width: 100%;
   overflow: auto;
   object-fit: cover;
@@ -137,7 +146,7 @@ header{
 .circle::after{
   content: "O";
 }
-
+/*22222222222222222222222 show-photos */
 /* <---------cv------------------- */
 
 /*------------- footer ----------- */
@@ -158,7 +167,7 @@ footer{
 .item{
   display: inline-block;
   border-right: solid 1px  #C7C1BA;
-  padding: 10px 20px;
+  padding: 10px 30px;
 }
 
 
@@ -170,7 +179,7 @@ footer{
 .right-shoulder{
   background: #fff;
   min-height: 100vh;
-  width: 24vw;
+  width: 25vw;
   position: fixed;
   right: 0;
   color: black;
@@ -201,4 +210,5 @@ footer{
   content: '"'
 }
 /*____________________________________keyframes________________________________*/
+
 /*____________________________________media____________________________________*/

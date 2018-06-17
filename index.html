@@ -4,16 +4,24 @@
     <meta charset="utf-8">
     <title>dandres-cv</title>
     <base href="./" target="_blank">
+    <link rel="shortcut icon" href="./image/cookie.png">
+    <link rel="stylesheet" href="./css/animation.css">
     <link rel="stylesheet" href="./css/master.css">
   </head>
   <body>
+    <div id="btn" class="btn"></div>
+
+    <section id="overlay" class="overlay active">
+      <article id="modal" class="modal">
 
 
-    <section  style="display: none"class="ovelay">
-      <article class="modal">
-        <div class="main-information my-name">Diego Andres Rojas</div>
-        <div class="main-information motivation">me motiva</div> <!-- pequeño  -->
-        <div class="main-information important"> Aprender y Compartir </div><!-- notable -->
+        <div class="modal-information modal-my-name">Diego Andrés Rojas González</div>
+        <div class="modal-information modal-i-am">Desarrollador Frontend</div>
+        <div class="modal-information modal-motivation">me motiva</div> <!-- pequeño  -->
+        <div class="modal-information modal-important"> Aprender y Compartir </div><!-- notable -->
+
+        <div class="click-me"> </div>
+
       </article>
     </section>
 
@@ -62,18 +70,18 @@
 
 
 
-        <div class="heph">
+        <div class="articules">
 
           <h4 class="sub-title">Heph</h4>
 
           <div class="images">
             <figcaption class="images-title">Desktop</figcaption>
-            <figure class="figure  pc-heph">
+            <figure class="figure  pc-image">
               <img src="./image/pc-heph.jpg" alt="pc-heph">
             </figure>
 
             <figcaption class="images-title" >Celular </figcaption>
-            <figure class="figure  phone-heph">
+            <figure class="figure  phone-image">
               <img src="./image/phone-heph.jpg" alt="phone-heph">
             </figure>
 
@@ -81,7 +89,7 @@
 
           <figcaption class="images-description">
             <p>
-              <strong>Stack frontend:</strong>html5 css3 javascript<br/>
+              <strong>Stack frontend:</strong> html5 css3 javascript<br/>
               <strong>Nombre:</strong> Heph<br/>
               <strong>Año:</strong> 2017<br/>
               <strong class="circle">Responsive </strong><br/>
@@ -96,40 +104,33 @@
 
 
 
+        <div class="articules">
 
+          <h4 class="sub-title">Show-Photos</h4>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="show-photos">
           <div class="images">
-            1
+            <figcaption class="images-title">Desktop</figcaption>
+            <figure class="figure  pc-image">
+              <img src="./image/show-photos.jpg" alt="pc-heph">
+            </figure>
 
           </div>
-          <figcaption> </figcaption>
+
+          <figcaption class="images-description">
+            <p>
+              <strong>Stack frontend:</strong> html5 css3<br/>
+              <strong>Nombre:</strong> showPhotos<br/>
+              <strong>Año:</strong> 2017<br/>
+              <strong class="circle">Responsive </strong><br/>
+              <strong class="circle" >Animation </strong><br/>
+              <strong>Url:</strong> <a href="https://d4ndres.github.io/showPhotos/">https://d4ndres.github.io/showPhotos/</a><br/>
+            </p>
+          </figcaption>
+
         </div>
-        <div class="sistematica">
-          <div class="images">
-            1
-          </div>
-          <figcaption> </figcaption>
-        </div>
+
+
+
       </article>
 
       <footer class="footer">
@@ -146,9 +147,10 @@
 
 
     <aside class="right-shoulder">
-      <div class="main-information my-name">Andres Rojas</div>
+      <div class="main-information my-name">Andrés Rojas</div>
       <div class="main-information motivation">me motiva</div> <!-- pequeño  -->
       <div class="main-information important"> Aprender y Compartir </div><!-- notable -->
     </aside>
+    <script src="./js/script.js"></script>
   </body>
 </html>
