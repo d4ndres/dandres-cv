@@ -85,6 +85,7 @@ h1{margin-bottom: 20px;}
   border-radius: 10px;
   background: rgba(0,0,0,.2);
   margin-bottom: 2em;
+  position: relative;
 
 }
 
@@ -122,7 +123,7 @@ h1{margin-bottom: 20px;}
 .phone-image{
   width: 377px;
 }
-.pc-image img{
+.pc-image img, .phone-image img{
   width: 100%;
   overflow: auto;
   object-fit: cover;
@@ -243,4 +244,24 @@ footer{
   .right-shoulder{
     display: none;
   }
+}
+@media screen and (max-width: 500px)
+{
+  .figure{
+    width: 250px;
+  }
+  .footer{
+    padding: 2em 0 2em 0;
+  }
+  .images-title{
+
+  }
+
+}
+@media screen and (max-width: 300px)
+{
+  .figure{
+    width: 200px;
+  }
+
 }
