@@ -48,7 +48,7 @@ a:hover{
 .left-shoulder{
   background:	#0a6e8b;
   min-height: 100vh;
-  width: 75vw;
+  width: 74vw;
 }
 
 /*---------------header---------------->*/
@@ -68,15 +68,11 @@ header{
   align-items: center;
   justify-content: center;
 }
-.visual-dark{
-  width: 50%;
-  height: 100%;
-}
+
 
 .formation, .goals{
   margin: 0 auto;
   width: inherit;
-
 }
 .formation{
   text-align: center;
@@ -87,8 +83,7 @@ header{
 }
 
 /*<--------------*header--------------/
-
-/* ---------cv-------------------> */
+/*------------cv-------------------> */
 
 .main-content{
   display: flex;
@@ -102,12 +97,13 @@ header{
   border-radius: 10px;
   background: rgba(0,0,0,.2);
   margin-bottom: 2em;
+
 }
 
 
 /*11111111111111111111111 Heph*/
 .heph{
-  width: 90%;
+  width: 80%;
   border: 1px solid #000;
   border-radius: 10px;
   background: rgba(0,0,0,.2);
@@ -122,7 +118,6 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 .images-title{
   font-size: 20px;
@@ -130,13 +125,14 @@ header{
 }
 .figure{
   border-radius: 10px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   width: 600px;
   max-height: 300px;
   cursor: ns-resize;
 }
 .phone-image{
-  width: 376px;
+  width: 377px;
 }
 .pc-image img{
   width: 100%;
@@ -169,11 +165,7 @@ footer{
   border-right: solid 1px  #C7C1BA;
   padding: 10px 30px;
 }
-
-
 /*------------- footer ----------- */
-
-
 /*____________________________________right____________________________________*/
 
 .right-shoulder{
@@ -190,11 +182,9 @@ footer{
   justify-content: center;
   align-items: center;
 }
-
 .main-information{
 
 }
-
 /* <---------about me------------- */
 .my-name{
   font-size: 1.8em;

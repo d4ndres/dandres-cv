@@ -24,7 +24,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   transition: .4s;
   opacity: 0;
   visibility: hidden;
@@ -45,6 +44,12 @@
 .modal-my-name{
   font-size: 1.8em;
 }
+.modal-my-name::after{
+  content: ' Gonzalez';
+}
+.modal-my-name::before{
+  content: 'Diego ';
+}
 .modal-motivacion{
   font-size: .8em;
 }
@@ -56,10 +61,34 @@
   content: '"'
 }
 
-.click-me{
-  content: " click me "
-  color: #fff;
+/*______________loading_________________________*/
+.canvas{
+  position: relative;
+  margin-top: 50px;
 }
+.box{
+  background: #000;
+}
+.punto{
+  height: 20px;
+  width: 20px;
+  border: solid 3px lightgray;
+  border-radius: 50%;
+  display: inline-block;
+}
+.punto:nth-of-type(1){
+  animation: ani 1s ease-in-out 5;
+}
+.punto:nth-of-type(2){
+  animation: ani 1s ease-in-out 5;
+  animation-delay: .3s;
+}
+.punto:nth-of-type(3){
+  animation: ani 1s ease-in-out 5;
+  animation-delay: .6s;
+}
+
+/*_____________keyframs______________________*/
 @keyframes x {
   from{
     transition: translateY(0);
@@ -77,5 +106,17 @@
   }
   to{
     transform: translateX(calc(50vw - 50%));
+  }
+}
+/*______________puntos_________________  */
+@keyframes ani {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+  to{
+    transform: translateY(0);
   }
 }
