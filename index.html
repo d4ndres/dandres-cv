@@ -31,7 +31,7 @@
         <h1>Desarrollador Frontend</h1><!-- buen BG -->
         <article class="about-me">
             <div class="formation">
-              <h3>Formacion</h3>
+              <h3>Formación</h3>
               <figure class="ico-frontend-platzi">
                 <img src="./image/image-arquitectura-frontend.png" alt="ico-frontend-platzi" width="145">
               </figure>
@@ -56,73 +56,88 @@
               </div>
             </div>
         </article>
-        <a href="./index.html#main-content" target="_parent" class="navegation-cv">VV</a>
+        <a href="./index.html#main-content" target="_self" class="navegation-cv icon-circle-down"></a>
       </header>
 
       <article id="main-content" class="main-content">
         <h2>Portafolio</h2>
-        <div class="articules heph">
-          <h4 class="sub-title">Heph</h4>
 
-          <div class="btns-responsive-500">
-            <button class="btn-responsive-500">Desktop</button>
-            <button class="btn-responsive-500">Celular</button>
-          </div>
 
-          <div class="images">
-            <figcaption class="images-title ">Desktop</figcaption>
-            <figure class="figure  pc-image">
-              <img src="./image/pc-heph.jpg" alt="pc-heph">
-            </figure>
-            <figcaption class="images-title" >Celular </figcaption>
-            <figure class="figure  phone-image">
-              <img src="./image/phone-heph.jpg" alt="phone-heph">
-            </figure>
+        <div class="articles">
+          <div class="article heph">
+            <h4 class="sub-title">Heph</h4>
+
+            <div class="btns-responsive-500">
+              <button id="btn-desktop-heph" class="btn-responsive-500 active">Desktop</button>
+              <button id="btn-phone-heph" class="btn-responsive-500">Celular</button>
+            </div>
+
+            <div class="images">
+              <figcaption class="images-title ">Desktop</figcaption>
+              <figure  id="pc-image-heph" class="figure  pc-image">
+                <img src="./image/pc-heph.jpg" alt="pc-heph">
+              </figure>
+              <figure id="phone-image-heph" class="figure  phone-image">
+                <img src="./image/phone-heph.jpg" alt="phone-heph">
+              </figure>
+            </div>
+            <figcaption class="images-description">
+              <p id="images-description-down-heph" class="images-description-down">
+                <strong>Stack frontend:</strong> html5 css3 javascript<br/>
+                <strong>Nombre:</strong> Heph<br/>
+                <strong>Año:</strong> 2017<br/>
+                <a class="url" href="https://d4ndres.github.io/heph/">https://d4ndres.github.io/heph/</a><br/>
+              </p>
+              <div id="down-description-heph" class="down-description"> <div class="span icon-down"></div> </div>
+            </figcaption>
+
           </div>
-          <figcaption class="images-description">
-            <p>
-              <strong>Stack frontend:</strong> html5 css3 javascript<br/>
-              <strong>Nombre:</strong> Heph<br/>
-              <strong>Año:</strong> 2017<br/>
-              <a class="url" href="https://d4ndres.github.io/heph/">https://d4ndres.github.io/heph/</a><br/>
-            </p>
-          </figcaption>
-          <div class="down-description">V</div>
+          <div class="article show-photos">
+            <h4 class="sub-title">Show-Photos</h4>
+
+            <div class="btns-responsive-500">
+              <button class="btn-responsive-500 active">Desktop</button>
+              <button class="btn-responsive-500">Celular</button>
+            </div>
+
+            <div class="images">
+              <figcaption class="images-title">Desktop</figcaption>
+              <figure class="figure  pc-image">
+                <img src="./image/show-photos.jpg" alt="pc-heph">
+              </figure>
+            </div>
+
+            <figcaption class="images-description">
+              <p id="images-description-down-show-photos" class="images-description-down">
+                <strong>Stack frontend:</strong> html5 css3<br/>
+                <strong>Nombre:</strong> showPhotos<br/>
+                <strong>Año:</strong> 2017<br/>
+                <a class="url" href="https://d4ndres.github.io/showPhotos/">https://d4ndres.github.io/showPhotos/</a><br/>
+              </p>
+              <div id="down-description-show-photos" class="down-description"> <div class="span icon-down"></div> </div>
+            </figcaption>
+
+
+          </div>
         </div>
-        <div class="articules show-photos">
-          <h4 class="sub-title">Show-Photos</h4>
 
-          <div class="btns-responsive-500">
-            <button class="btn-responsive-500">Desktop</button>
-            <button class="btn-responsive-500">Celular</button>
-          </div>
 
-          <div class="images">
-            <figcaption class="images-title">Desktop</figcaption>
-            <figure class="figure  pc-image">
-              <img src="./image/show-photos.jpg" alt="pc-heph">
-            </figure>
-          </div>
-          <figcaption class="images-description">
-            <p>
-              <strong>Stack frontend:</strong> html5 css3<br/>
-              <strong>Nombre:</strong> showPhotos<br/>
-              <strong>Año:</strong> 2017<br/>
-              <a class="url" href="https://d4ndres.github.io/showPhotos/">https://d4ndres.github.io/showPhotos/</a><br/>
-            </p>
-          </figcaption>
-          <div class="down-description">V</div>
-        </div>
+
+
+
+
+
       </article>
+
       <footer class="footer">
-        <span class="my-email">d4ndres@gmail.com</span>
         <nav class="menu-footer">
           <ul class="items">
-            <li class="item"><a href="https://github.com/d4ndres">Github</a></li>
-            <li class="item"><a href="mailto:d4ndres.com">E-mail</a></li>
-            <li class="item"><a href="https://codepen.io/d4ndres/">Code-pen</a></li>
+            <li class="item li-github"><a class="icon-github" href="https://github.com/d4ndres">Github</a></li>
+            <li class="item li-email"><a class="icon-email" href="mailto:d4ndres@gmail.com">E-mail</a></li>
+            <li class="item li-code-pen"><a class="icon-codepen" href="https://codepen.io/d4ndres/">Code-pen</a></li>
           </ul>
         </nav>
+        <span class="my-email">d4ndres@gmail.com</span>
       </footer>
     </section>
     <aside class="right-shoulder">

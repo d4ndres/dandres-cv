@@ -1,4 +1,58 @@
 /*____________________________________out______________________________________*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ie7r9r');
+  src:  url('../fonts/icomoon.eot?ie7r9r#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ie7r9r') format('truetype'),
+    url('../fonts/icomoon.woff?ie7r9r') format('woff'),
+    url('../fonts/icomoon.svg?ie7r9r#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-down:before {
+  content: "  \1f326";
+}
+.icon-email::after {
+  content: "  \e945";
+}
+.icon-cross:before {
+  content: "  \ea0f";
+}
+.icon-checkmark:before {
+  content: "  \ea10";
+}
+.icon-circle-down:before {
+  content: "  \ea43";
+}
+.icon-github::after {
+  content: "  \eab0";
+}
+.icon-linkedin::after {
+  content: "  \eac9";
+}
+.icon-codepen::after {
+  content: "  \eae8";
+}
+/*----------------------  */
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Neuton');
+/* font-family: 'Neuton', serif;
+font-family: 'Cantarell', sans-serif; */
 
 /*____________________________________global___________________________________*/
 
@@ -6,15 +60,19 @@ body{
   margin: 0;
   min-height: 100vh;
   background: lightgray;
-  font-family: 'Sanchez', arial;
+  font-family: 'Cantarell', sans-serif;
   font-size: 15px;
 
   display: flex;
   flex-direction: column;
   position: relative;
 }
+button{
+  font-family: 'Neuton', serif;
+  font-size: 1.1em;
+}
 h1,h2,h3,h4{
-  marg1n: 0;
+  font-family: 'Neuton', serif;
   font-size: 2em;
   text-align: center;
   margin: .3em 0 .8em 0;
@@ -80,6 +138,7 @@ h1{margin-bottom: 10px;}
   margin: 20px auto 0;
   min-height: 35px;
   max-width: 35px;
+  font-size: 2em;
   border-radius: 50%;
   border: solid rgba(0,0,0,.3) .8px;
 
@@ -87,7 +146,9 @@ h1{margin-bottom: 10px;}
   justify-content: center;
   align-items: center;
 }
-
+.navegation-cv:hover{
+  text-decoration: none;
+}
 /*<--------------*header--------------/
 /*------------cv-------------------> */
 
@@ -97,7 +158,16 @@ h1{margin-bottom: 10px;}
   align-items: center;
 }
 /*00000000000000000000000 mini-global  */
-.articules{
+.articles{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.article{
   width: 90%;
   border: 1px solid #000;
   border-radius: 10px;
@@ -136,6 +206,7 @@ h1{margin-bottom: 10px;}
 }
 .phone-image{
   width: 377px;
+  display: none;
 }
 .pc-image img, .phone-image img{
   width: 100%;
@@ -149,25 +220,45 @@ h1{margin-bottom: 10px;}
 /* <---------cv------------------- */
 
 /*------------- footer ----------- */
-footer{
+.footer{
   background: #444444;
-  color: 	#f5f5f5;
-  text-align: right;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.my-email, .menu-footer{
-  display: inline-block;
+.menu-footer{
+  text-decoration: none;
 }
-.my-email{
-  position: absolute;
-  left: 10px;
-  top: 7px;
+.items{
+  padding: 0;
 }
 .item{
   display: inline-block;
-  border-right: solid 1px  #C7C1BA;
-  padding: 10px 30px;
+  padding: 20px 0;
+
 }
+.item a{
+  border-left: 1px solid #fff;
+  padding:  0 15px;
+}
+.item:first-child a {
+  border-left: none;
+}
+/* .li-github::before{
+  content: 'Github';
+}
+.li-email::before{
+  content: 'E-mail';
+}
+.li-code-pen::before{
+  content: 'Code-pen';
+} */
+
+
+
+
+
+
 /*------------- footer ----------- */
 /*____________________________________right____________________________________*/
 
@@ -258,15 +349,75 @@ footer{
   .right-shoulder{
     display: none;
   }
+  /*down description*/
+  .images-description{
+    border-top: 1px dashed #000;
+    padding: 0;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .images-description-down{
+    transform: translateY(-100px);
+    text-align: center;
+    position: absolute;
+    margin: auto;
+
+    transition: .4s;
+  }
+  .url::before{
+    content: '';
+  }
+  .down-description{
+    min-width: 100%;
+    display: block;
+    border-top: solid 1px rgba(255,255,255,.3);
+    background: rgba(0,0,0,.3);
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    border-radius: 0 0 10px 10px;
+
+  }
+  .images-description-down.active{
+      position: relative;
+      transform: translateY(0);
+  }
+  .images-description-down ~ .down-description .span::before{
+    transition: .4s;
+    font-size: 1.3em;
+  }
+  .images-description-down.active ~ .down-description .span::before{
+    content: '^';
+    font-weight: bold;
+  }
+  /*down description*/
+  /* footer */
+  .footer{
+    flex-direction: column;
+  }
+
 }
 @media screen and (max-width: 500px)
 {
+  /* articles ----> */
   .figure{
     width: 250px;
+    min-height: 300px;
+    cursor: default;
   }
-  .footer{
-    padding: 2em 0 2em 0;
+  .phone-image{
+    display: none;
   }
+
+  /* <---- articles */
+  /* btns -->*/
   .images-title{
     display: none;
   }
@@ -295,7 +446,7 @@ footer{
     will-change: background;
   }
 
-  .btn-responsive-500:active{
+  .btn-responsive-500.active{
     transform: scale(.97);
     background: #2BB3D8;
     box-shadow: none;
@@ -305,23 +456,9 @@ footer{
     background: rgba(0,0,0,.6);
     box-shadow: none;
   }
-  .images-description{
-    border-top: 1px dashed #000;
-  }
-  .circle{
-    display: none;
-  }
-  .url::before{
-    content: '';
-  }
-  .down-description{
-    display: block;
-    border-top: solid 1px rgba(255,255,255,.3);
-    background: rgba(0,0,0,.3);
-    padding: 10px 0;
-    text-align: center;
-    font-weight: bold;
-  }
+
+  /* <-- btns */
+  /* footer--> */
 
 }
 @media screen and (max-width: 300px)
