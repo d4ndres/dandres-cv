@@ -1,19 +1,15 @@
 // ---------------------modal---------------------------
-// const $overlay = document.getElementById('overlay')
-// const $modal = document.getElementById('modal')
-// const $btn = document.getElementById('btn')
-//
-// $overlay.addEventListener( 'click' , close )
-// $modal.addEventListener( 'animationend', close )
-// $btn.addEventListener( 'click' , toggle_overlay )
-//
-// function close(){
-//   $overlay.classList.remove('active')
-// }
-// function toggle_overlay() {
-//   $overlay.classList.toggle('active')
-//
-// }
+const $overlay = document.getElementById('overlay')
+const $modal = document.getElementById('modal')
+const $btn = document.getElementById('btn')
+
+$overlay.addEventListener( 'click' , close )
+$modal.addEventListener( 'animationend', close )
+
+function close(){
+  $overlay.classList.remove('active')
+}
+
 // ------------------------------------------------------
 const $downDescriptionHeph = document.getElementById('down-description-heph')
 const $downDescriptionShowPhotos = document.getElementById('down-description-show-photos')
@@ -29,8 +25,9 @@ const $btnDesktopHeph = document.getElementById('btn-desktop-heph')
 const $btnPhoneHeph = document.getElementById('btn-phone-heph')
 const $pcImageHeph = document.getElementById('pc-image-heph')
 const $phoneImageHeph = document.getElementById('phone-image-heph')
+const $imageTitleHeph = document.getElementById('images-title-heph')
 
-
+// mejorar esste codigo (este es codigo prueva)
 $btnDesktopHeph.addEventListener( 'click' , ABC )
 $btnPhoneHeph.addEventListener( 'click' , CBA )
 let boolDesktop = true
@@ -45,6 +42,7 @@ function ABC(){
     despedir()
     $pcImageHeph.style.display = 'initial'
     $phoneImageHeph.style.display = 'none'
+    $imageTitleHeph.classList.toggle('active')
   }
 }
 function CBA(){
@@ -56,6 +54,7 @@ function CBA(){
     despedir()
     $pcImageHeph.style.display = 'none'
     $phoneImageHeph.style.display = 'initial'
+    $imageTitleHeph.classList.toggle('active')
   }
 }
 
