@@ -21,51 +21,55 @@ $downDescriptionShowPhotos.addEventListener( 'click' , () => $descriptionShowPho
 $downDescriptionHeph.addEventListener( 'click' , () => $descriptionHeph.classList.toggle('active') )
 
 // ------------------------------------------------------
-const $btnDesktopHeph = document.getElementById('btn-desktop-heph')
-const $btnPhoneHeph = document.getElementById('btn-phone-heph')
-const $pcImageHeph = document.getElementById('pc-image-heph')
-const $phoneImageHeph = document.getElementById('phone-image-heph')
-const $imageTitleHeph = document.getElementById('images-title-heph')
+// codigo mejorado en un objeto
+class InteractiveBtn{
+  constructor( btn , imgPc, subTitle, imgPhone){
+    this.btn = btn
+    this.imgPc = imgPc  //state = true
+    this.imgPhone = imgPhone || undefined//state = false
+    this.subTitle = subTitle
+    this.state = true
+    this.subTitle.innerHTML = 'Desktop'
+    this.btn.innerHTML = 'Celular'
+    try {
+      this.imgPhone.style.display = 'none'
+      this.btn.addEventListener('mouseup', () => this.onClcik())
+    } catch(error){
+      this.btn.style.display = 'none'
+    };
+  }
+  onClcik(){
+    this.state = !this.state
+    this.togglesValue()
+  }
 
-// mejorar esste codigo (este es codigo prueva)
-$btnDesktopHeph.addEventListener( 'click' , ABC )
-$btnPhoneHeph.addEventListener( 'click' , CBA )
-let boolDesktop = true
-let boolPhone = false
-
-function ABC(){
-  if(boolDesktop == false)
-  {
-    boolDesktop = true
-    boolPhone = false
-    saludar()
-    despedir()
-    $pcImageHeph.style.display = 'initial'
-    $phoneImageHeph.style.display = 'none'
-    $imageTitleHeph.classList.toggle('active')
+  togglesValue(){
+    if (this.state && ( this.imgPc != this.imgPhone )) {
+        this.imgPc.style.display = 'initial'
+        this.imgPhone.style.display = 'none'
+        this.btn.innerHTML = 'Celular'
+        this.subTitle.innerHTML = 'Desktop'
+    } else {
+        this.imgPc.style.display = 'none'
+        this.imgPhone.style.display = 'initial'
+        this.subTitle.innerHTML = 'Celular'
+        this.btn.innerHTML = 'Desktop'
+    }
   }
 }
-function CBA(){
-  if(boolPhone == false)
-  {
-    boolDesktop = false
-    boolPhone = true
-    saludar()
-    despedir()
-    $pcImageHeph.style.display = 'none'
-    $phoneImageHeph.style.display = 'initial'
-    $imageTitleHeph.classList.toggle('active')
-  }
-}
+// heph
+const $btnHeph = document.getElementById('btn-heph')
+const $pcImaHeph = document.getElementById('pc-image-heph')
+const $phoneImaHeph = document.getElementById('phone-image-heph')
+const $imgTitleHeph = document.getElementById('images-title-heph')
 
-function saludar(){
-  $btnDesktopHeph.classList.toggle('active')
-}
-function despedir(){
-  $btnPhoneHeph.classList.toggle('active')
-}
-// _________________________
+const btnHeph = new InteractiveBtn( $btnHeph, $pcImaHeph, $imgTitleHeph, $phoneImaHeph )
+// showPhotos
 
+const $btnShowPhotos = document.getElementById('btn-show-photos')
+const $pcImaShowPhotos= document.getElementById('pc-image-show-photos')
+const $imgTitleShowPhotos= document.getElementById('images-title-show-photos')
 
+const btnShowPhotos = new InteractiveBtn( $btnShowPhotos, $pcImaShowPhotos, $imgTitleShowPhotos)
 
 // ------------------------------------------------------
