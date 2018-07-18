@@ -1,0 +1,5 @@
+se genera este registro para tener mas informacion sobre los commits
+
+Despues de la version 1.0
+
+Se generara una dos nueva rama donde se le hara un cambio brusco al frontend (Se busca cambia minimalista y elegante)

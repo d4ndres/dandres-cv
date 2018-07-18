@@ -1,61 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <base target="_blank">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <style media="screen">
-      .overlay{position:fixed;left:0;right:0;top:0;bottom:0;background:#000;color:#fff;z-index:1;display:flex;justify-content:center;align-items:center;transition:.4s;opacity:0;visibility:hidden}.overlay.active{opacity:1;visibility:visible}.modal{text-align:center;min-width:25vw;animation:x 1.6s}.canvas{position:relative;margin-top:50px}.box{background:#000}.punto{height:20px;width:20px;border:solid 3px lightgray;border-radius:50%;display:inline-block}.punto:nth-of-type(1){animation:ani .7s ease-in-out 3}.punto:nth-of-type(2){animation:ani .7s ease-in-out 3;animation-delay:.28s}.punto:nth-of-type(3){animation:ani .7s ease-in-out 3;animation-delay:.5s}@keyframes x{from{transition:translateY(0)}to{transition:translateY(1)}}@keyframes out-modal{from{transform:translate(0)}80%{transform:translateX(calc(50vw - 50%))}to{transform:translateX(calc(50vw - 50%))}}@keyframes ani{0%{transform:translateY(0)}50%{transform:translateY(-20px)}to{transform:translateY(0)}}
-    </style>
-    <title>dandres-cv</title>
-    <link rel="shortcut icon" href="./image/cookie.png"/>
+    <base target="_blank" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>dandres-portafolio</title>
+    <link rel="shortcut icon" href="./image/ico-elephant.png"/>
   </head>
   <body>
 
-    <section id="overlay" class="overlay active">
-      <article id="modal" class="modal">
-        <div class="canvas">
-          <div class="punto"></div>
-          <div class="punto"></div>
-          <div class="punto"></div>
-        </div>
+    <section class="landblock">
+
+      <article class="introduction">
+
+        <h1>Diego Rojas</h1>
+        <h3>Desarrollador Frontend</h3>
+
       </article>
+      <a href="#portafolio" target="_self" class="navegation-portafolio icon-circle-down"></a>
     </section>
 
-    <section class="left-shoulder">
-
-      <header id="header"><!-- Photo by Andrej Lišakov on Unsplash -->
-        <h1>Desarrollador Frontend</h1><!-- buen BG -->
-        <article class="about-me">
-            <div class="formation">
-              <h3>Formación</h3>
-              <figure class="ico-frontend-platzi">
-                <img src="./image/image-arquitectura-frontend.png" alt="ico-frontend-platzi" width="145">
-              </figure>
-              <figcaption> carrera de arquitectura Frontend en <a href="https://platzi.com/arquitecto/">platzi</a> </figcaption>
-            </div>
-            <div class="goals">
-              <h3>Metas</h3>
-              <div class="media-95-columns">
-
-                <ul>
-                  <h4>Personales</h4>
-                  <li class="goal">aprender react</li>
-                  <li class="goal">aprender a desarrollar bakend</li>
-                  <li class="goal">aprender inteligencia artificial</li>
-                </ul>
-                <ul>
-                  <h4>Para Compartir</h4>
-                  <li class="goal">crear artígulo para el blog de platzi</li>
-                </ul>
-
+    <section id="portafolio" class="portafolio">
+      <h2>PORTAFOLIO</h2>
+      <article class="show-web-sides">
+        
+        <div class="box">
+          <aside class="aside-box">
+            <div id='change-btn' class="circule-btn circule-btn1"></div>
+            <div id='btn-slide-heph' class="circule-btn circule-btn2"></div>
+          </aside>
+          <figure class="images">
+            <div class="overlay"></div>
+            <img id='pc-image-heph' src="./image/pc-heph.jpg" alt="pc-heph">
+            <img id='phone-image-heph' src="./image/phone-heph.jpg" alt="phone-heph">
+          </figure>
+          <figcaption class="description">
+            <div id='description-slide-heph' class="slide">
+              <div class="content-slide">
+                <h3>Heph</h3>
+                <strong>Stack frontend:</strong> html5 css3 javascript<br/>
+                <strong>Nombre:</strong> Heph<br/>
+                <strong>Año:</strong> 2017<br/>
+                <a class="url" href="https://d4ndres.github.io/heph/">https://d4ndres.github.io/heph/</a><br/>
               </div>
             </div>
-        </article>
-        <a href="#main-content" target="_self" class="navegation-cv icon-circle-down"></a>
-      </header>
+          </figcaption>
+        </div>         
 
-      <article id="main-content" class="main-content">
+        <div class="box">
+          <aside class="aside-box">
+            <div  class="circule-btn circule-btn1"></div>
+            <div  class="circule-btn circule-btn2"></div>
+          </aside>
+          <figure class="images">
+            <div class="overlay"></div>
+            <img src="./image/show-photos.jpg" alt="pc-heph">
+          </figure>
+          <figcaption class="description">
+            <div class="slide">
+              <div class="content-slide">
+                <h3>ShowPhotos</h3>
+                <strong>Stack frontend:</strong> html5 css3<br/>
+                <strong>Nombre:</strong> ShowPhotos<br/>
+                <strong>Año:</strong> 2017<br/>
+                <a class="url" href="https://d4ndres.github.io/heph/">https://d4ndres.github.io/showPhotos/</a><br/>
+              </div>
+            </div>
+          </figcaption>
+        </div>        
+
+
+      </article>
+    </section>
+<!--       <article id="main-content" class="main-content">
         <h2>Portafolio</h2>
 
         <div class="articles">
@@ -122,12 +139,20 @@
         </nav>
         <span class="my-email">d4ndres@gmail.com</span>
       </footer>
-    </section>
-    <aside class="right-shoulder">
-      <div class="main-information my-name">Andrés Rojas</div>
-      <div class="main-information motivation">me motiva</div> <!-- pequeño  -->
-      <div class="main-information important"> Aprender y Compartir </div><!-- notable -->
-    </aside>
+    -->
+    <footer class="footer">
+      
+     <nav class="menu-footer">
+     <ul class="items">
+       <li class="item li-github"><a class="icon-github" href="https://github.com/d4ndres">Github</a></li>
+       <li class="item li-email"><a class="icon-email" href="mailto:d4ndres@gmail.com">E-mail</a></li>
+       <li class="item li-code-pen"><a class="icon-codepen" href="https://codepen.io/d4ndres/">Code-pen</a></li>
+     </ul>
+    </nav>
+    <span class="my-email">d4ndres@gmail.com</span>
+  
+    </footer>
+
     <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/master.css">
   </body>
