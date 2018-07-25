@@ -96,7 +96,14 @@ a:active{
 h2{
   font-size: 2.5em;
 }
-
+.dark-overlay{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0; left: 0;right: 0;bottom: 0;
+  background: rgba(0, 0, 0, .8);
+  z-index: 1;
+}
 
 /*____________________________________landblock___________________________________*/
 
@@ -161,6 +168,7 @@ h2{
 }
  
 /*____________________________________portafolio___________________________________*/
+
 .portafolio{
 	flex: 1;
   text-align: center;
@@ -178,16 +186,50 @@ h2{
   
   
 }
+/* componente de portafolio */
+/*--------  DAD ------------ */
 .box{
   max-width: 80vw;
   border:  solid 1px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .4);
-  max-height: 203px;
+  height: 203px;
   margin-bottom: 2em;
-  
   position: relative;
   display: flex;
 }
+
+
+/*-------- CHILDREN -------- */
+/* img */
+.images{
+  width: 350px;
+  min-width: 250px;
+  margin: 0;
+  
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+.images img{
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+/* .overlay{
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;
+  background: rgba(255, 255, 255, .2);
+
+  transition: .7s opacity, .7s visibility;
+}
+.box:hover .overlay{
+  opacity: 0;
+  visibility: hidden;
+} */
+
+/* btn-aside */
 .aside-box{
   width: 2.3vw;
   height: 100%;
@@ -214,32 +256,7 @@ h2{
   background: var(--my-bg-blue);
 }
 
-.images{
-  width: 25vw;
-  min-width: 250px;
-  margin: 0;
-  
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
-}
-.overlay{
-  position: absolute;
-  top: 0; bottom: 0; right: 0; left: 0;
-  background: rgba(255, 255, 255, .2);
-
-  transition: .7s opacity, .7s visibility;
-}
-.box:hover .overlay{
-  opacity: 0;
-  visibility: hidden;
-}
-.images img{
-  width: 100%;
-  object-fit: cover;
-  padding-bottom: 0;
-  vertical-align: bottom;
-}
+/* slide */
 .description{
   border-left: solid .5px;
 }
