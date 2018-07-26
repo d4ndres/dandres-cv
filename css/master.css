@@ -209,15 +209,33 @@ h2{
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
+  cursor: pointer;
 }
 .images img{
   width: 100%;
   object-fit: cover;
   vertical-align: bottom;
-  cursor: pointer;
+}
+/*------modal ------img -----*/
+.dark-overlay.active{
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+.box.active{
+    z-index: 2;
+    height: 75vh;
+    position: fixed;
+    transform: translateY(-100vh);
+}
+.box.active .images {
+  width: 75vw;
+  cursor: default;
 }
 
-/* .overlay{
+
+
+.overlay{
   position: absolute;
   top: 0; bottom: 0; right: 0; left: 0;
   background: rgba(255, 255, 255, .2);
@@ -227,7 +245,7 @@ h2{
 .box:hover .overlay{
   opacity: 0;
   visibility: hidden;
-} */
+}
 
 /* btn-aside */
 .aside-box{

@@ -57,32 +57,16 @@ class ModalImg{
     this.overlay = overlay
     this.state = false
     this.btn.addEventListener('click', () => this.onClcik())
-    this.overlay.addEventListener('click', () => this.onClcik())
+    this.overlay.addEventListener('click', () => this.closeModal())
   }
   onClcik(){
-    this.state = !this.state
-    if (this.state) {
-    
-      this.overlay.style.visibility = 'visible'
-      this.overlay.style.opacity = '1'
-      this.box.style.zIndex = '2'
-      this.btn.style.width = '75vw'
-      this.box.style.height = '75vh'
-      this.box.style.position = 'fixed'
-      this.box.style.transform = 'translateY(-100vh)'
-    
-    } else {
+    this.overlay.classList.add('active')
+    this.box.classList.add('active')
+  }
+  closeModal(){
 
-      this.overlay.style.visibility = 'hidden'
-      this.overlay.style.opacity = '0'
-      this.box.style.zIndex = '0'
-      this.btn.style.width = '350px'
-      this.box.style.height = '203px'
-      this.box.style.position = 'relative'
-      this.box.style.transform = 'translateY(0)'
-
-    }
-    
+    this.overlay.classList.remove('active')
+    this.box.classList.remove('active')
   }
   
 }
@@ -103,7 +87,7 @@ const $overlay = document.getElementById('dark-overlay')
 const hephChanger = new btnChanger( $btnHeph, $pcImaHeph, $phoneImaHeph )
 const hephSlide = new btnSlideDescription ( $btnSlideHeph, $descriptionSlideHeph)
 
-const hephModal = new ModalImg($images, $box, $overlay)
+const modal = new ModalImg( $images, $box, $overlay )
 
 // class InteractiveBtn{
 //   constructor( btn , imgPc, imgPhone){
