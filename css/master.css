@@ -60,8 +60,10 @@ font-family: 'Maven Pro', sans-serif;
 :root{
   --my-blue: #0078ff ;
   --my-red: #ff0000 ;
-  --my-bg-blue: radial-gradient(circle, #0078FF, #000);
-  --my-bg-red:  radial-gradient(circle, #ff0000, #000);
+/*  --my-blue: lightseagreen;
+  --my-red: springgreen ;*/
+  --my-bg-blue: radial-gradient(circle, var(--my-blue), #000);
+  --my-bg-red:  radial-gradient(circle, var(--my-red), #000);
 }
 body{
 	margin: 0;
@@ -74,7 +76,7 @@ body{
 	display: flex;
 	flex-direction: column;
   
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', arial;
 }
 *::selection{
 	background: lightblue;
@@ -205,19 +207,22 @@ h2{
   width: 350px;
   min-width: 250px;
   margin: 0;
+  background: #000;
   
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
+  cursor: pointer;
 }
 .images img{
   width: 100%;
   object-fit: cover;
   vertical-align: bottom;
-  cursor: pointer;
 }
 
-/* .overlay{
+
+
+/*.overlay{
   position: absolute;
   top: 0; bottom: 0; right: 0; left: 0;
   background: rgba(255, 255, 255, .2);
@@ -227,10 +232,11 @@ h2{
 .box:hover .overlay{
   opacity: 0;
   visibility: hidden;
-} */
+}*/
 
 /* btn-aside */
 .aside-box{
+  background: rgba(255,255,255,.4);
   width: 2.3vw;
   height: 100%;
   border-right: solid .5px;
@@ -259,12 +265,15 @@ h2{
 /* slide */
 .description{
   border-left: solid .5px;
+  overflow: hidden;
 }
 .slide{
+
   overflow-x: hidden;
   overflow-y:  hidden;
   width: 0;
   transition: .7s;
+  transition-timing-function: ease-out;
   text-align: left;
 }
 .content-slide{
@@ -283,7 +292,39 @@ h2{
   font-size: 2em;
   margin-bottom: .5em;
 }
-
+/*------modal ------img -----*/
+.dark-overlay.active{
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+.box.active{
+    z-index: 2;
+    height: 75vh;
+    position: fixed;
+    transform: translateY(-100vh);
+}
+.box.active .images {
+  width: 75vw;
+  cursor: default;
+}
+.box.active .images img:last-child{
+  width: initial;
+}
+.box.active .description{
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 30vw;
+  border-left: none;
+}
+.box.active .slide{
+  background: rgba(255,255,255,.4);
+  padding-bottom: 10px;
+}
+.box.active .slide:hover{
+  background: rgba(255,255,255,.8);
+}
 /*____________________________________footer___________________________________*/
 
 .footer{

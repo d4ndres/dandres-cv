@@ -8,8 +8,12 @@ class btnChanger{
     this.imgDesktop = imgDesktop // state = true
     this.imgCellPhone = imgCellPhone || undefined //state = flase
     this.state = true
-    this.imgCellPhone.style.display = 'none'
-    this.btn.addEventListener('mouseup', () => this.onClcik())
+    try{
+      this.imgCellPhone.style.display = 'none'
+      this.btn.addEventListener('mouseup', () => this.onClcik())
+    }catch(err) {
+      this.btn.style.display = 'none'
+    }
   }
   onClcik(){
 
@@ -57,53 +61,54 @@ class ModalImg{
     this.overlay = overlay
     this.state = false
     this.btn.addEventListener('click', () => this.onClcik())
-    this.overlay.addEventListener('click', () => this.onClcik())
+    this.overlay.addEventListener('click', () => this.closeModal())
   }
   onClcik(){
-    this.state = !this.state
-    if (this.state) {
-    
-      this.overlay.style.visibility = 'visible'
-      this.overlay.style.opacity = '1'
-      this.box.style.zIndex = '2'
-      this.btn.style.width = '75vw'
-      this.box.style.height = '75vh'
-      this.box.style.position = 'fixed'
-      this.box.style.transform = 'translateY(-100vh)'
-    
-    } else {
+    this.overlay.classList.add('active')
+    this.box.classList.add('active')
+  }
+  closeModal(){
 
-      this.overlay.style.visibility = 'hidden'
-      this.overlay.style.opacity = '0'
-      this.box.style.zIndex = '0'
-      this.btn.style.width = '350px'
-      this.box.style.height = '203px'
-      this.box.style.position = 'relative'
-      this.box.style.transform = 'translateY(0)'
-
-    }
-    
+    this.overlay.classList.remove('active')
+    this.box.classList.remove('active')
   }
   
 }
-
+//global
+const $darkOverlay = document.getElementById('dark-overlay')
 
 //heph
-const $btnHeph = document.getElementById('change-btn')
+const $btnHeph = document.getElementById('change-btn-heph')
 const $pcImaHeph = document.getElementById('pc-image-heph')
 const $phoneImaHeph = document.getElementById('phone-image-heph')
 
 const $btnSlideHeph = document.getElementById('btn-slide-heph')
 const $descriptionSlideHeph = document.getElementById('description-slide-heph')
 
-const $images = document.getElementById('images')
-const $box = document.getElementById('box')
-const $overlay = document.getElementById('dark-overlay')
+const $imagesHeph = document.getElementById('images-heph')
+const $boxHeph = document.getElementById('box-heph')
 
 const hephChanger = new btnChanger( $btnHeph, $pcImaHeph, $phoneImaHeph )
 const hephSlide = new btnSlideDescription ( $btnSlideHeph, $descriptionSlideHeph)
+const hephModal = new ModalImg( $imagesHeph, $boxHeph, $darkOverlay )
 
-const hephModal = new ModalImg($images, $box, $overlay)
+//showPhotos
+
+
+const $btnShowPhotos = document.getElementById('change-btn-show-photos')
+const $pcImaShowPhotos = document.getElementById('pc-image-show-photos')
+const $phoneImaShowPhotos = document.getElementById('phone-image-show-photos')
+
+const $btnSlideShowPhotos = document.getElementById('btn-slide-show-photos')
+const $descriptionSlideShowPhotos = document.getElementById('description-slide-show-photos')
+
+const $imagesShowPhotos = document.getElementById('images-show-photos')
+const $boxShowPhotos = document.getElementById('box-show-photos')
+
+const showPhotosChanger = new btnChanger( $btnShowPhotos, $pcImaShowPhotos, $phoneImaShowPhotos )
+const showPhotosSlide = new btnSlideDescription ( $btnSlideShowPhotos, $descriptionSlideShowPhotos)
+const showPhotosModal = new ModalImg( $imagesShowPhotos, $boxShowPhotos, $darkOverlay )
+
 
 // class InteractiveBtn{
 //   constructor( btn , imgPc, imgPhone){
