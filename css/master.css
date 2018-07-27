@@ -308,7 +308,7 @@ h2{
   width: 75vw;
   cursor: default;
 }
-.box.active .images img:last-child{
+.box.active .images img:nth-of-type(2){
   width: initial;
 }
 .box.active .description{
@@ -360,4 +360,15 @@ h2{
 }
 .item:first-child a {
   border-left: none;
+}
+
+@media screen and (max-width: 700px) {
+  .aside-box{
+    display: none;
+  }
+  .footer{
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
 }
