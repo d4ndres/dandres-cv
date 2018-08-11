@@ -42,7 +42,6 @@ class btnSlideDescription{
     if (this.state) {
       this.slide.style.width = '50vw'
       this.slide.style.fontSize = '16px'
-      this.btn.style.background = '#0078FF'
     } else {
       this.slide.style.width =  '0'
       this.slide.style.fontSize = '0' 
@@ -108,6 +107,22 @@ const $boxShowPhotos = document.getElementById('box-show-photos')
 const showPhotosChanger = new btnChanger( $btnShowPhotos, $pcImaShowPhotos, $phoneImaShowPhotos )
 const showPhotosSlide = new btnSlideDescription ( $btnSlideShowPhotos, $descriptionSlideShowPhotos)
 const showPhotosModal = new ModalImg( $imagesShowPhotos, $boxShowPhotos, $darkOverlay )
+
+//crossroad
+
+const $btnCrossroad = document.getElementById('change-btn-crossroad')
+const $pcImaCrossroad = document.getElementById('pc-image-crossroad')
+const $phoneImaCrossroad = document.getElementById('phone-image-crossroad')
+
+const $btnSlideCrossroad = document.getElementById('btn-slide-crossroad')
+const $descriptionSlideCrossroad = document.getElementById('description-slide-crossroad')
+
+const $imagesCrossroad = document.getElementById('images-crossroad'); $imagesCrossroad.style.background = '#778899'
+const $boxCrossroad = document.getElementById('box-crossroad')
+
+const CrossroadChanger = new btnChanger( $btnCrossroad, $pcImaCrossroad, $phoneImaCrossroad )
+const CrossroadSlide = new btnSlideDescription ( $btnSlideCrossroad, $descriptionSlideCrossroad)
+const CrossroadModal = new ModalImg( $imagesCrossroad, $boxCrossroad, $darkOverlay )
 
 
 // class InteractiveBtn{
