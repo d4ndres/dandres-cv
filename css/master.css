@@ -264,7 +264,13 @@ h2{
   object-fit: cover;
   vertical-align: top;
 }
-
+.images img:nth-of-type(1) {
+  transition: .3s;
+  opacity: 0;
+}
+.images img.b-loaded {
+  opacity: 1;
+}
 
 
 /*.overlay{
@@ -408,16 +414,6 @@ h2{
   border-left: none;
 }
 
-@media screen and (max-width: 700px) {
-  .aside-box{
-    display: none;
-  }
-  .footer{
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10px;
-  }
-}
 
 /* ____________________BACKGROUND__________________ */
 .landblock{
@@ -483,5 +479,50 @@ h2{
   }
   to {
     transform: translateY(-2000px);
+  }
+}
+/*_________________media__________________________ */
+@media screen and (max-width: 850px) {
+
+  .introduction {
+    flex-direction: column;
+  }
+  .i-can {
+    margin-bottom: 10vh;
+  }
+  .box.active{
+    transform: translateY(-130vh);
+  }
+  .images {
+    cursor: default;
+  }
+  .aside-box{
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footer{
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .i-can, .i-am {
+    width: 90%;
+    min-width: 290px;
+    font-size: 14px;
+  }
+  .i-can {
+    height: 40vh;
+  }
+  .progress-border{
+    width: 150px;
+  }
+  .menu-footer {
+    font-size: 14px;
+    
   }
 }

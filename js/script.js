@@ -1,5 +1,14 @@
-
+// recordatorios
+// alert('agregar blazi, otro cdn de optimizacion y estilos para el color background del lado alguna linea debajo')
 // Prototipe buttons
+
+
+var bLazy = new Blazy ({
+  selector: 'img'
+})
+
+
+
 class btnChanger{
 
 
@@ -61,6 +70,9 @@ class ModalImg{
     this.state = false
     this.btn.addEventListener('click', () => this.onClcik())
     this.overlay.addEventListener('click', () => this.closeModal())
+    window.addEventListener('keyup', (ev) => {
+      if (ev.keyCode == 27 ) this.closeModal()
+    })
   }
   onClcik(){
     this.overlay.classList.add('active')
@@ -73,56 +85,64 @@ class ModalImg{
   }
   
 }
-//global
-const $darkOverlay = document.getElementById('dark-overlay')
+if ( window.matchMedia('(min-width: 850px)').matches ) {
+  
+    //global
+  const $darkOverlay = document.getElementById('dark-overlay')
 
-//heph
-const $btnHeph = document.getElementById('change-btn-heph')
-const $pcImaHeph = document.getElementById('pc-image-heph')
-const $phoneImaHeph = document.getElementById('phone-image-heph')
+  //heph
+  const $btnHeph = document.getElementById('change-btn-heph')
+  const $pcImaHeph = document.getElementById('pc-image-heph')
+  const $phoneImaHeph = document.getElementById('phone-image-heph')
 
-const $btnSlideHeph = document.getElementById('btn-slide-heph')
-const $descriptionSlideHeph = document.getElementById('description-slide-heph')
+  const $btnSlideHeph = document.getElementById('btn-slide-heph')
+  const $descriptionSlideHeph = document.getElementById('description-slide-heph')
 
-const $imagesHeph = document.getElementById('images-heph')
-const $boxHeph = document.getElementById('box-heph')
+  const $imagesHeph = document.getElementById('images-heph')
+  const $boxHeph = document.getElementById('box-heph')
 
-const hephChanger = new btnChanger( $btnHeph, $pcImaHeph, $phoneImaHeph )
-const hephSlide = new btnSlideDescription ( $btnSlideHeph, $descriptionSlideHeph)
-const hephModal = new ModalImg( $imagesHeph, $boxHeph, $darkOverlay )
+  const hephChanger = new btnChanger( $btnHeph, $pcImaHeph, $phoneImaHeph )
+  const hephSlide = new btnSlideDescription ( $btnSlideHeph, $descriptionSlideHeph)
+  const hephModal = new ModalImg( $imagesHeph, $boxHeph, $darkOverlay )
 
-//showPhotos
+  //showPhotos
 
 
-const $btnShowPhotos = document.getElementById('change-btn-show-photos')
-const $pcImaShowPhotos = document.getElementById('pc-image-show-photos')
-const $phoneImaShowPhotos = document.getElementById('phone-image-show-photos')
+  const $btnShowPhotos = document.getElementById('change-btn-show-photos')
+  const $pcImaShowPhotos = document.getElementById('pc-image-show-photos')
+  const $phoneImaShowPhotos = document.getElementById('phone-image-show-photos')
 
-const $btnSlideShowPhotos = document.getElementById('btn-slide-show-photos')
-const $descriptionSlideShowPhotos = document.getElementById('description-slide-show-photos')
+  const $btnSlideShowPhotos = document.getElementById('btn-slide-show-photos')
+  const $descriptionSlideShowPhotos = document.getElementById('description-slide-show-photos')
 
-const $imagesShowPhotos = document.getElementById('images-show-photos')
-const $boxShowPhotos = document.getElementById('box-show-photos')
+  const $imagesShowPhotos = document.getElementById('images-show-photos')
+  const $boxShowPhotos = document.getElementById('box-show-photos')
 
-const showPhotosChanger = new btnChanger( $btnShowPhotos, $pcImaShowPhotos, $phoneImaShowPhotos )
-const showPhotosSlide = new btnSlideDescription ( $btnSlideShowPhotos, $descriptionSlideShowPhotos)
-const showPhotosModal = new ModalImg( $imagesShowPhotos, $boxShowPhotos, $darkOverlay )
+  const showPhotosChanger = new btnChanger( $btnShowPhotos, $pcImaShowPhotos, $phoneImaShowPhotos )
+  const showPhotosSlide = new btnSlideDescription ( $btnSlideShowPhotos, $descriptionSlideShowPhotos)
+  const showPhotosModal = new ModalImg( $imagesShowPhotos, $boxShowPhotos, $darkOverlay )
 
-//crossroad
+  //crossroad
 
-const $btnCrossroad = document.getElementById('change-btn-crossroad')
-const $pcImaCrossroad = document.getElementById('pc-image-crossroad')
-const $phoneImaCrossroad = document.getElementById('phone-image-crossroad')
+  const $btnCrossroad = document.getElementById('change-btn-crossroad')
+  const $pcImaCrossroad = document.getElementById('pc-image-crossroad')
+  const $phoneImaCrossroad = document.getElementById('phone-image-crossroad')
 
-const $btnSlideCrossroad = document.getElementById('btn-slide-crossroad')
-const $descriptionSlideCrossroad = document.getElementById('description-slide-crossroad')
+  const $btnSlideCrossroad = document.getElementById('btn-slide-crossroad')
+  const $descriptionSlideCrossroad = document.getElementById('description-slide-crossroad')
 
-const $imagesCrossroad = document.getElementById('images-crossroad'); $imagesCrossroad.style.background = '#778899'
-const $boxCrossroad = document.getElementById('box-crossroad')
+  const $imagesCrossroad = document.getElementById('images-crossroad'); $imagesCrossroad.style.background = '#778899'
+  const $boxCrossroad = document.getElementById('box-crossroad')
 
-const CrossroadChanger = new btnChanger( $btnCrossroad, $pcImaCrossroad, $phoneImaCrossroad )
-const CrossroadSlide = new btnSlideDescription ( $btnSlideCrossroad, $descriptionSlideCrossroad)
-const CrossroadModal = new ModalImg( $imagesCrossroad, $boxCrossroad, $darkOverlay )
+  const CrossroadChanger = new btnChanger( $btnCrossroad, $pcImaCrossroad, $phoneImaCrossroad )
+  const CrossroadSlide = new btnSlideDescription ( $btnSlideCrossroad, $descriptionSlideCrossroad)
+  const CrossroadModal = new ModalImg( $imagesCrossroad, $boxCrossroad, $darkOverlay )
+
+
+}
+
+
+
 
 
 // class InteractiveBtn{
