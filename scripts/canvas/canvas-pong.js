@@ -254,7 +254,7 @@ class Game {
   }
   start() {
     canvasP.style.cursor = "pointer";
-    addEventListener("click", () => {
+    canvasP.addEventListener("click", () => {
       if (this.initOne) {
         animateP();
         canvasP.style.cursor = "default";
