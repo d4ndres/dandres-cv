@@ -1,162 +1,213 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <base target="_blank" />
-    <meta charset="utf-8" />
-    <meta name="author" content="d4ndres" />
+<html>
+    <head>
+        <title>d4ndres Portafolio</title>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="png" href="./assets/logo-dandres-negro.png"/>
+        <link rel="styleSheet" href="./styles/master.css"/>
+        <link rel="styleSheet" href="./styles/fire.css" />
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="hero-container" >
+            <canvas class="canvas-hero" id="canvas-hero"></canvas>
+            <div class="wrapper-background">
+                <div class="wrapper">
+                    <header class="header" id="header">
+        
+                        <p class="logo">ndres</p>
+                        <nav class="main-menu">
+                            <ul class="list-main-menu">
+                                <li>
+                                    <a href="#portfolio"> Portafolio</a>
+                                </li>
+                                <li>
+                                    <a href="#experience"> experiencia</a>
+                                </li>
+                                <li>
+                                    <a href="#form">trabajemos juntos</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </header>
 
-    <meta name="theme-color" content="#1B2734" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#1B2734">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+                </div>
+            </div>
+            <div class="wrapper">
+                <section class="hero" id="hero"> 
+                    
+                    <div class="main-title-container">
+                        <h1 class="main-title"> Hola! Soy <strong>Dandres</strong> <br/>  desarrollador <strong>javascript</strong> con <br/>pasión por las animaciones</h1>
+                    </div>
+                    <figure class="hero-image-container">
+                        <img src="./assets/me.png" alt="una imagen mia" height="300">
+                    </figure>
+                </section>
+            </div>
+        </div>
+        <section id="portfolio" class="portfolio">
+            <div class="wrapper">
+                <h2 class="portfolio-title">Portafolio (proyectos destacados)</h2>
+                <article class="project-1">
+                    <div class="project-details">
+                        <h3 class="project-title">Pong</h3>
+                        <h5 class="project-subtitle">
+                            En un lienzo donde puedes hacer trazos puedes crear videojuegos
+                        </h5>
+                        <!-- <p class="project-date"><small><strong>Fecha:</strong> 2019 </small></p> -->
+                        <p class="project-link"><small><strong>Puedes verlo en:</strong> <a target="_blank" href="https://codepen.io/d4ndres/full/YdWXNQ">codepen</a>   </small></p>
+                        <p class="porfolio-description"> En el año 2019, le dedique gran parte de mi tiempo a aprender canvas, 
+                            entendiendo como funcionan los lienzos esta es la base de los videojuegos y <strong>Pong</strong> es uno de los resultados</p>
+                        <!-- <p>Pong es uno de los primeros videojuegos creados, similar a tenis consiste en dos barras las cuales son controladas por jugadores -->
+                        <!-- o por la máquina misma y una bola, si la bola pasa la cancha del otro jugador se anotara un punto el primero que anote 10 puntos gana.</p> -->
+                        <p>Puedes haciendo click en el Pong para jugar te moveras con w y s</p>
+                    </div>
+                    <!-- <div class="project-about"> -->
+                        <canvas class="project-canvas canvas-pong" id="canvas-pong"></canvas>
+                    <!-- </div> -->
+                </article>
+                <article class="project-1 project-2">
+                    <figure class="project-2-versions">
+                        <img src="./assets/desktop-crossroad.jpg" alt="desktop-crossroad"   class="desktop-crossroad" id="desktop-crossroad"/>
+                        <img src="./assets/movile-crossroad.jpg" alt="movile-crossroad"     class="movile-crossroad"  id="movile-crossroad"/>
+                    </figure>
+                    <div class="project-details">
+                        <h3 class="project-title">Crossroad</h3>
+                        <h5 class="project-subtitle">
+                            Una pagina con lo mas basico del desarrollo
+                        </h5>                  
+                        <p class="project-link"><small><strong>Puedes verlo en:</strong> <a  target="_blank" href="https://d4ndres.github.io/crossroad/">https://d4ndres.github.io/crossroad/</a> </small></p>
+                        <p class="porfolio-description">
+                            Crossroad es una academia de lenguas extrangeras ellos enseñan ingles y aleman, con lo html, css, y algo de js
+                            se pudo llegar al siguiente resultado.
+                        </p>
+                        <div id="btn-framework" class="btn-framework">
+                            <div id="btn-movile" class="btn-movile">
+                              movile
+                            </div>
+                            <div id="btn-desktop" class="btn-desktop">
+                              desktop
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        <section id="experience" class="experience">
+            <div class="wrapper">
+                <h2>Más sobre mi experiencia</h2>
+                <div class="items-xp">
+                    <article class="item-xp" id="container-wave">
+                        <figure class="item-xp-figure">
+                            <canvas id="canvas-wave"></canvas>
+                        </figure>
+                        <div class="item-xp-details">
+                            <h3>Canvas</h3 >
+                            <p>se puede usar para dibujar gráficos mediante JavaScript como las gráficas, composiciones fotográficas, crear animaciones, o incluso procesado o renderizado de vídeo en tiempo real.</p>
+                            <input class="range-bar" type="range" id="input-y" value="50"/>
+                            <input class="range-bar" type="range" id="input-amplitude" value="50" />
+                            <input class="range-bar" type="range" id="input-length" value="100" />
+                            <input class="range-bar" type="range" id="input-frequency" value="100"/>
+                        </div>
+                    </article>
+                    <article class="item-xp">
+                        <figure class="item-xp-figure">
+                            <div class="container-fire">
+                                
+                                <div class="scale">
+                                    <div class="grow-flames">
+                                        <div class="grow-flame"></div>
+                                        <div class="grow-flame"></div>
+                                        <div class="grow-flame"></div>  
+                                        <div class="grow-flame"></div>
+                                        <div class="grow-flame"></div>  
+                                        <div class="grow-flame"></div>  
+                                        <div class="grow-flame"></div>  
+                                        <div class="grow-flame"></div>  
+                                    </div>
+                                    <div class="wood"></div>
+                                    <div class="ground"></div>
+
+                                </div>
+  
+  
+                            </div>
+                        </figure>
+                        <div class="item-xp-details">
+                            <h3>Pure CSS animations</h3 >
+                            <p>Los elementos HTML se pueden representar de manera diferente gracias a CSS esto de una manera ordenada nos permite relizar dibujos y al mismo tiempo animar.</p>
+                        </div>
+                        <div class="btn-xp-container">
+                            <a href="https://codepen.io/d4ndres/pen/BvQgXE" target="_blank">ir al codepen</a>
+                        </div>
+                    </article>
+                    <article class="item-xp">
+                        <figure class="item-xp-figure">
+                            <img src="./assets/capture-canal-youtube.PNG" alt="background youtube d4ndres canal">
+                        </figure>
+                        <div class="item-xp-details">
+                            <h3>Canal YouTube</h3 >
+                            <p>compartir e investigar, me encanta, por lo me creé un canal en YouTube donde me compartiré mi conocimiento y dare mi opinión hacia algunos temas de interés</p>
+                        </div>
+                        <div class="btn-xp-container">
+                            <a  target="_blank" href="https://www.youtube.com/channel/UChANJClr_my9B2SWRL-nQAQ?view_as=subscriber"> ir al sitio</a>
+                        </div>
+                    </article>
+                    <article class="item-xp">
+                        <figure class="item-xp-figure">
+                            <img class="img-high" src="./assets/Urbain_Le_Verrier.jpg" alt="le verrier img">
+                        </figure>
+                        <div class="item-xp-details">
+                            <h3>Metodos numericos</h3 >
+                            <p>Los problemas matemticos me encatan, simplemente me encantan. combinar programacion con matemiticas es un reto y en este emundo hay muchos por resolver.</p>
+                        </div>
+                        <div class="btn-xp-container">
+                            <a href="https://projecteuler.net/archives" target="_blank">project Euler</a>
+                        </div>
+                    </article>
+
+                    
+                </div>
+            </div>
     
-    <title>dandres-portafolio</title>
-    <link rel="shortcut icon" href="./image/ico-elephant.png"/>
-
-      
-  
-  
-  </head>
-  <body>
-
-
-
-    <div id='dark-overlay' class="dark-overlay"></div>
-    <section class="landblock">
-      
-      <div id='stars'></div>
-      <div id='stars2'></div>
-      <div id='stars3'></div>
-
-
-      <article class="introduction">
-        
-        <div class="i-am">
-          <h1>Diego Rojas</h1>
-          <h4>D4ndres</h4>
-          <h3>Desarrollador Frontend</h3>
-        </div>
-        <div class="i-can">
-          <h4>CV</h4>
-          <ul class="stacks">
-            <li class="level-stack html-stack">
-              <span>HTML5</span>  <div class="progress-border"><div class="progress-filling" style="width: 80%"></div></div>
-            </li>
-            <li class="level-stack css-stack">
-              <span>CSS3</span>  <div class="progress-border"><div class="progress-filling" style="width: 60%"></div></div>
-            </li>
-            <li class="level-stack javascript-stack">
-              <span>JS</span>   <div class="progress-border"><div class="progress-filling" style="width: 60%"></div></div>
-            </li>
-            <li class="level-stack javascript-stack">
-              <span>Firebase</span>   <div class="progress-border"><div class="progress-filling" style="width: 5%"></div></div>
-            </li>
-            <li class="level-stack javascript-stack">
-              <span>Vue JS</span>   <div class="progress-border"><div class="progress-filling" style="width: 20%"></div></div>
-            </li>
-            <li class="level-stack javascript-stack">
-              <span>Vue Native</span>   <div class="progress-border"><div class="progress-filling" style="width: 0"></div></div>
-            </li>
-          </ul>
-        </div>
-
-
-      </article>
-
-      
-    </section>
-
-    <section id="portafolio" class="portafolio">
-      <h2>PORTAFOLIO</h2>
-      <article class="show-web-sides">
-        
-        <div id='box-heph' class="box">
-          <aside class="aside-box">
-            <div id='change-btn-heph' class="circule-btn circule-btn1"></div>
-            <div id='btn-slide-heph' class="circule-btn circule-btn2"></div>
-          </aside>
-          <figure id='images-heph' class="images">
-            <div class="overlay"></div>
-            <img id='pc-image-heph' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" data-src="./image/heph/pc-heph.jpg" alt="pc-heph">
-            <img id='phone-image-heph'  src="./image/heph/phone-heph.jpg" alt="phone-heph">
-          </figure>
-          <figcaption class="description">
-            <div id='description-slide-heph' class="slide">
-              <div class="content-slide">
-                <h3>Heph</h3>
-                <strong>Stack frontend:</strong> html5 css3 javascript<br/>
-                <strong>Nombre:</strong> Heph<br/>
-                <strong>Año:</strong> 2017<br/>
-                <a class="url" href="https://d4ndres.github.io/heph/">https://d4ndres.github.io/heph/</a><br/>
-              </div>
+                </div>    
             </div>
-          </figcaption>
-        </div>         
+        </section>
+        <div class="form-container">
+            <section class="wrapper  form-container">
 
-        <div id='box-show-photos' class="box">
-          <aside class="aside-box">
-            <div id='change-btn-show-photos' class="circule-btn circule-btn1"></div>
-            <div id='btn-slide-show-photos' class="circule-btn circule-btn2"></div>
-          </aside>
-          <figure id='images-show-photos' class="images">
-            <div class="overlay"></div>
-            <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" data-src="./image/showPhotos/show-photos.jpg" alt="pc-heph">
-          </figure>
-          <figcaption class="description">
-            <div id='description-slide-show-photos' class="slide">
-              <div class="content-slide">
-                <h3>ShowPhotos</h3>
-                <strong>Stack frontend:</strong> html5 css3<br/>
-                <strong>Nombre:</strong> ShowPhotos<br/>
-                <strong>Año:</strong> 2017<br/>
-                <a class="url" href="https://d4ndres.github.io/heph/">https://d4ndres.github.io/showPhotos/</a><br/>
-              </div>
-            </div>
-          </figcaption>
+                <form id="form" class="form"><!--prevent default-->
+                    <label for="sent-email">
+                        <h3 class="form-title">¿Creamos algo juntos?</h3>
+                    </label>
+                    <input type="email" id="sent-email" placeholder="dejame tu E-mail" required>
+                    <button class="btn-form" value="submit">Enviar</button>
+                </form>
+                <article class="about-me">
+                    <p>Soy <strong>Dandres</strong> un terrícola en constante crecimiento y aprendizaje, fascinado por la naturaleza del universo. Acá te dejo mi correo.</p>
+                    <div class="copy-email">
+                        <!-- <span class="icon-copy"></span> -->
+                        <span>d4ndres@gmail.com</span>   
+                    </div>
+                </article>
+            </section>
         </div>
-
-
-        <div id='box-crossroad' class="box">
-          <aside class="aside-box">
-            <div id='change-btn-crossroad' class="circule-btn circule-btn1"></div>
-            <div id='btn-slide-crossroad' class="circule-btn circule-btn2"></div>
-          </aside>
-          <figure id='images-crossroad' class="images">
-            <div class="overlay"></div>
-            <img id='pc-image-crossroad' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" data-src="./image/crossroad/pc-crossroad.jpg" alt="pc-crossroad">
-            <img id='phone-image-crossroad' src="./image/crossroad/phone-crossroad.jpg" alt="phone-crossroad">
-          </figure>
-          <figcaption class="description">
-            <div id='description-slide-crossroad' class="slide">
-              <div class="content-slide">
-                <h3>Crossroad</h3>
-                <strong>Stack frontend:</strong> html5 css3 javascript<br/>
-                <strong>Nombre:</strong> Crossroad<br/>
-                <strong>Año:</strong> 2018<br/>
-                <a class="url" href="https://d4ndres.github.io/crossroad/">https://d4ndres.github.io/crossroad/</a><br/>
-              </div>
+        <footer class="footer">
+            <div class="wrapper">
+                <nav class="menu-footer">
+                <ul class="items">
+                  <li class="item li-github"><a target="_black" class="icon-github" href="https://github.com/d4ndres">Github</a></li>
+                  <li class="item li-code-pen"><a target="_black" class="icon-codepen" href="https://codepen.io/d4ndres/">Code-pen</a></li>
+                </ul>
+               </nav>
+                
+               
             </div>
-          </figcaption>
-        </div>      
-
-
-      </article>
-    </section>
-
-    <footer class="footer">
-      
-     <nav class="menu-footer">
-     <ul class="items">
-       <li class="item li-github"><a class="icon-github" href="https://github.com/d4ndres">Github</a></li>
-       <li class="item li-email"><a class="icon-email" href="mailto:d4ndres@gmail.com">E-mail</a></li>
-       <li class="item li-code-pen"><a class="icon-codepen" href="https://codepen.io/d4ndres/">Code-pen</a></li>
-     </ul>
-    </nav>
-    <span class="my-email">d4ndres@gmail.com</span>
-  
-    </footer>
-
-    <link rel="stylesheet" href="./css/master-min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
-    <script src="./js/script-min.js"></script>
-  </body>
+        </footer>
+        <script src="./scripts/canvas/canvas-hero.js"></script>
+        <script src="./scripts/toggle-butons.js"></script>
+        <script src="./scripts/canvas/canvas-pong.js"></script>
+        <script src="./scripts/canvas/canvas-wave.js"></script>
+    </body>
 </html>
