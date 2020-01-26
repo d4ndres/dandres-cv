@@ -7,6 +7,7 @@
         <link rel="styleSheet" href="./styles/master.css"/>
         <link rel="styleSheet" href="./styles/fire.css" />
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="hero-container" >
@@ -45,51 +46,48 @@
                 </section>
             </div>
         </div>
-        <section id="portfolio" class="portfolio">
+        <section id="portfolio" class="projects">
             <div class="wrapper">
-                <h2 class="portfolio-title">Portafolio (proyectos destacados)</h2>
-                <article class="project-1">
+                <h2 class="projects-title">Portafolio (proyectos destacados)</h2>
+                <article class="project">
                     <div class="project-details">
                         <h3 class="project-title">Pong</h3>
-                        <h5 class="project-subtitle">
-                            En un lienzo donde puedes hacer trazos puedes crear videojuegos
-                        </h5>
-                        <!-- <p class="project-date"><small><strong>Fecha:</strong> 2019 </small></p> -->
+
                         <p class="project-link"><small><strong>Puedes verlo en:</strong> <a target="_blank" href="https://codepen.io/d4ndres/full/YdWXNQ">codepen</a>   </small></p>
-                        <p class="porfolio-description"> En el año 2019, le dedique gran parte de mi tiempo a aprender canvas, 
-                            entendiendo como funcionan los lienzos esta es la base de los videojuegos y <strong>Pong</strong> es uno de los resultados</p>
-                        <!-- <p>Pong es uno de los primeros videojuegos creados, similar a tenis consiste en dos barras las cuales son controladas por jugadores -->
-                        <!-- o por la máquina misma y una bola, si la bola pasa la cancha del otro jugador se anotara un punto el primero que anote 10 puntos gana.</p> -->
-                        <p>Puedes haciendo click en el Pong para jugar te moveras con w y s</p>
+                        <p> 
+                            En el año 2019, le dedique gran parte de mi tiempo a aprender canvas, 
+                            entendiendo como funcionan los lienzos esta es la base de los videojuegos y <strong>Pong</strong> es uno de los resultados
+                            <br />
+                            Puedes jugar haciendo click en el Pong para moverte preciona las teclas "W" y "S"
+                        </p>
                     </div>
-                    <!-- <div class="project-about"> -->
-                        <canvas class="project-canvas canvas-pong" id="canvas-pong"></canvas>
-                    <!-- </div> -->
-                </article>
-                <article class="project-1 project-2">
-                    <figure class="project-2-versions">
-                        <img src="./assets/desktop-crossroad.jpg" alt="desktop-crossroad"   class="desktop-crossroad" id="desktop-crossroad"/>
-                        <img src="./assets/movile-crossroad.jpg" alt="movile-crossroad"     class="movile-crossroad"  id="movile-crossroad"/>
+                    <figure class="project-figure">
+                        <canvas class="project-canvas " id="canvas-pong"></canvas>
                     </figure>
+
+                </article>
+                <article class="project">
                     <div class="project-details">
                         <h3 class="project-title">Crossroad</h3>
-                        <h5 class="project-subtitle">
-                            Una pagina con lo mas basico del desarrollo
-                        </h5>                  
+                
                         <p class="project-link"><small><strong>Puedes verlo en:</strong> <a  target="_blank" href="https://d4ndres.github.io/crossroad/">https://d4ndres.github.io/crossroad/</a> </small></p>
-                        <p class="porfolio-description">
+                        <p>
                             Crossroad es una academia de lenguas extrangeras ellos enseñan ingles y aleman, con lo html, css, y algo de js
                             se pudo llegar al siguiente resultado.
                         </p>
                         <div id="btn-framework" class="btn-framework">
                             <div id="btn-movile" class="btn-movile">
-                              movile
+                                movile
                             </div>
                             <div id="btn-desktop" class="btn-desktop">
-                              desktop
+                                desktop
                             </div>
                         </div>
                     </div>
+                    <figure class="project-figure project-figure-have-img">
+                        <img src="./assets/desktop-crossroad.jpg" alt="desktop-crossroad"   class="desktop-crossroad" id="desktop-crossroad"/>
+                        <img src="./assets/movile-crossroad.jpg" alt="movile-crossroad"     class="movile-crossroad"  id="movile-crossroad"/>
+                    </figure>
                 </article>
 
             </div>
@@ -174,24 +172,25 @@
                 </div>    
             </div>
         </section>
-        <div class="form-container">
-            <section class="wrapper  form-container">
-
-                <form id="form" class="form"><!--prevent default-->
-                    <label for="sent-email">
-                        <h3 class="form-title">¿Creamos algo juntos?</h3>
-                    </label>
-                    <input type="email" id="sent-email" placeholder="dejame tu E-mail" required>
-                    <button class="btn-form" value="submit">Enviar</button>
-                </form>
-                <article class="about-me">
-                    <p>Soy <strong>Dandres</strong> un terrícola en constante crecimiento y aprendizaje, fascinado por la naturaleza del universo. Acá te dejo mi correo.</p>
-                    <div class="copy-email">
-                        <!-- <span class="icon-copy"></span> -->
-                        <span>d4ndres@gmail.com</span>   
-                    </div>
-                </article>
-            </section>
+        <div class="bg-blue">
+            <div class="wrapper">
+                <section class="form-container ">
+    
+                    <form id="form" class="form">
+                        <label for="sent-email">
+                            <h3 class="form-title">¿Creamos algo juntos?</h3>
+                        </label>
+                        <input type="email" id="sent-email" placeholder="dejame tu E-mail" required>
+                        <button class="btn-form" value="submit">Enviar</button>
+                    </form>
+                    <article class="about-me">
+                        <p>Soy <strong>Dandres</strong> un terrícola en constante crecimiento y aprendizaje, fascinado por la naturaleza del universo. Acá te dejo mi correo.</p>
+                        <div class="copy-email">
+                            <span>d4ndres@gmail.com</span>   
+                        </div>
+                    </article>
+                </section>
+            </div>
         </div>
         <footer class="footer">
             <div class="wrapper">

@@ -10,7 +10,7 @@ function randomDirection() {
 
 var canvasP = document.getElementById("canvas-pong");
 canvasP.width = innerWidth;
-canvasP.height = innerHeight;
+canvasP.height = canvasP.width/2;
 canvasP.style.background = "#000";
 
 var cP = canvasP.getContext("2d");
