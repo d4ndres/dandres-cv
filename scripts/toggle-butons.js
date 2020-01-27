@@ -34,4 +34,10 @@ btnFramework.addEventListener('click', () => {
     }
 })
 
+const bars = document.getElementById('bars')
+
+bars.addEventListener('click', () => {
+ bars.classList.toggle('active')
+})
+
 
