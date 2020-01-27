@@ -222,7 +222,7 @@ a:active {
 
 .project-title{
     margin: 0.3em 0 0.1em 0;
-    font-size: 30px;
+    font-size: 32px;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -255,9 +255,9 @@ a:active {
 
 .project-figure {
     width: 50%;
-    min-width: 320px;
+    /* min-width: 320px; */
     overflow-y: auto;
-    background: hsl(50, 50%, 90%);
+    /* background: hsl(50, 50%, 90%); */
 }
 .project-figure img {
     width: 100%;
@@ -367,15 +367,17 @@ a:active {
     width: 400px;
     margin: auto;
     text-align: center;
+    font-size: 30px;
 }
 .item-xp-details h3 {
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 1em;
     padding: 10px;
     margin: 0;
 }
 .item-xp-details p {
     text-align: left;
+    font-size: .5em;
 }
 .btn-xp-container {
     /* background: red; */
@@ -515,13 +517,72 @@ a:active {
         font-size: 25px;
     }
 }
-@media screen and ( max-width: 840px ) {
+@media screen and ( max-width: 768px ) {
+    .main-title {
+        line-height: 1.5em;
+        letter-spacing: 6px;
+        font-size: 22px;
+    }
+
+    .project {
+        flex-wrap: wrap;
+    }
+    .project-figure {
+        width: 80%;
+        order: -1;
+    }
+    .project > * {
+        margin: 0;
+        padding: 0;
+    }
+    .project-details {
+        text-align: center;
+        width: auto;
+    }
+    .btn-framework {
+        margin: auto;
+    }
+    .form-container {
+        flex-wrap: wrap;
+    }
+}
+@media screen and ( max-width: 870px ) {
     .header {
         justify-content: center;
     }
+    .hero {
+        flex-wrap: wrap;
+        /* min-height: 100vh; */
+        
+    }
+    .main-title-container {
+        min-height: auto;
+    }
+    .hero-image-container {
+        order: -1;
+    }
+    
 }
 @media screen and ( max-width: 510px ) {
+    .project-figure {
+        height: 200px;
+    }
+    .hero-image-container  img {
+        height: 230px;
+    }
     .main-menu {
         display: none;
+    }
+    .item-xp-figure {
+        width: auto;
+
+    }
+    .item-xp-details {
+        width: auto;
+        margin: 10px;
+        font-size: 28px;
+    }
+    .item-xp:first-child .item-xp-details {
+        transform: translateY(0);
     }
 }
