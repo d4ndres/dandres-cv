@@ -40,4 +40,11 @@ bars.addEventListener('click', () => {
  bars.classList.toggle('active')
 })
 
+//menu
+const itemsMainMenu = document.getElementsByClassName('item-main-menu')
 
+for ( let  i = 0; i < itemsMainMenu.length; i++ ) {
+    itemsMainMenu[i].addEventListener('click', () => {
+        bars.classList.remove('active')
+    })
+}

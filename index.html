@@ -24,14 +24,14 @@
                         <p class="logo">ndres</p>
                         <nav class="main-menu">
                             <ul class="list-main-menu">
-                                <li>
-                                    <a href="#portfolio"> Portafolio</a>
+                                <li class="item-main-menu">
+                                    <a href="#portfolio">Portafolio</a>
                                 </li>
-                                <li>
-                                    <a href="#experience"> experiencia</a>
+                                <li class="item-main-menu">
+                                    <a href="#experience">experiencia</a>
                                 </li>
-                                <li>
-                                    <a href="#form">trabajemos juntos</a>
+                                <li class="item-main-menu">
+                                    <a href="#footer">trabajemos juntos</a>
                                 </li>
                             </ul>
                         </nav>
@@ -53,7 +53,7 @@
         </div>
         <section id="portfolio" class="projects">
             <div class="wrapper">
-                <h2 class="projects-title">Portafolio (proyectos destacados)</h2>
+                <h2 class="section-title">Portafolio (proyectos destacados)</h2>
                 <article class="project">
                     <div class="project-details">
                         <h3 class="project-title">Pong</h3>
@@ -99,7 +99,7 @@
         </section>
         <section id="experience" class="experience">
             <div class="wrapper">
-                <h2>Más sobre mi experiencia</h2>
+                <h2 class="section-title">Más sobre mi experiencia</h2>
                 <div class="items-xp">
                     <article class="item-xp" id="container-wave">
                         <figure class="item-xp-figure">
@@ -177,37 +177,30 @@
                 </div>    
             </div>
         </section>
-        <div class="bg-blue">
-            <div class="wrapper">
-                <section class="form-container ">
-    
-                    <form id="form" class="form">
-                        <label for="sent-email">
-                            <h3 class="form-title">¿Creamos algo juntos?</h3>
-                        </label>
-                        <input type="email" id="sent-email" placeholder="dejame tu E-mail" required>
-                        <button class="btn-form" value="submit">Enviar</button>
-                    </form>
-                    <article class="about-me">
-                        <p>Soy <strong>Dandres</strong> un terrícola en constante crecimiento y aprendizaje, fascinado por la naturaleza del universo. Acá te dejo mi correo.</p>
-                        <div class="copy-email">
-                            <span>d4ndres@gmail.com</span>   
-                        </div>
-                    </article>
-                </section>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="wrapper">
-                <nav class="menu-footer">
-                <ul class="items">
-                  <li class="item li-github"><a target="_black" class="icon-github" href="https://github.com/d4ndres">Github</a></li>
-                  <li class="item li-code-pen"><a target="_black" class="icon-codepen" href="https://codepen.io/d4ndres/">Code-pen</a></li>
-                </ul>
-               </nav>
+        <footer id="footer" class="footer">
+            <article class="big-quetion">
+                <h3 >¿Creamos algo juntos?</h3>
                 
-               
-            </div>
+            </article>
+            
+
+            <article class="contacts">
+                <div>
+                    <ul>
+                        <li class="item li-github"><a target="_black" class="icon-github" href="https://github.com/d4ndres"></a></li>
+                        <li class="item li-code-pen"><a target="_black" class="icon-codepen" href="https://codepen.io/d4ndres/"></a></li>
+                        <li class="item li-code-pen"><a target="_black" class="icon-whatsapp" href="https://codepen.io/d4ndres/"></a></li>
+                        <!-- <li>twitter</li> -->
+                    </ul>
+                </div>   
+                <div class="close-contact">
+                    <div> <strong>Telefono</strong> <span>+573193703790</span></div>
+                    <div> <strong>email</strong> <span>d4ndres@gmail.com</span></div>
+                </div>
+            </article>
+            <article class="copyright">
+                <p>Copyright ©2020 All rights reserved.</p>
+            </article>
         </footer>
         <script src="./scripts/canvas/canvas-hero.js"></script>
         <script src="./scripts/toggle-butons.js"></script>
