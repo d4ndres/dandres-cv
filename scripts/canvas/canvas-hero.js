@@ -88,9 +88,18 @@ class Flower {
 
 
 let flowers = []
+let seed
+let screen = window.matchMedia('screen and (max-width: 767px)')
+if( screen.matches ) {
+  seed = 40
+
+} else {
+  seed = 100
+}
+
 
 function init() {
-  for ( let i = 0; i < 100; i++ ) {
+  for ( let i = 0; i < seed; i++ ) {
     let x = Math.random()  * _w 
    let y = randomInt( -10, _h * 1.5)
     flowers.push( new Flower( x, y, 1))
